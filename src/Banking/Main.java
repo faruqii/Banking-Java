@@ -16,15 +16,28 @@ public class Main {
         Customer customer3 = new Customer("James", "Wick");
         customer3.setAccount(account3);
 
+        account1.deposit(50000);
+        account2.withdraw(400);
         account3.withdraw(100);
+
         
         bank.addCustomer(customer1);
         bank.addCustomer(customer2);
         bank.addCustomer(customer3);
 
-        bank.getCustomer(0).getAccount().deposit(100);
-        
-        
+        System.out.println("Customer of Bank");
+        System.out.println("First Customer: " + customer1.getFirstName() + " " + customer1.getLastName() + " "
+                            + "with remaining balance Rp." +account1.getBalance());
+        System.out.println("Second Customer: " + customer2.getFirstName() + " " + customer2.getLastName() + " "
+                            + "with remaining balance Rp." +account2.getBalance());
+        System.out.println("Third Customer: " + customer3.getFirstName() + " " + customer3.getLastName() + " "
+                            + "with remaining balance Rp." +account3.getBalance());
+        System.out.println("Total Customer: " +bank.getNumberOfCustomers());
+
+        System.out.println("\nType of Account");
+        System.out.println("Default Account : " + customer1.getFirstName() + " " + customer1.getLastName() );
+        System.out.println("Savings Account : " + customer2.getFirstName() + " " + customer2.getLastName());
+        System.out.println("Checking Account: " + customer3.getFirstName() + " " + customer3.getLastName());
     }
-    
+
 }

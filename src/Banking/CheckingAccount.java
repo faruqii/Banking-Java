@@ -16,7 +16,6 @@ public class CheckingAccount extends Account {
 
     @Override
     public void withdraw(double amount) {
-        // TODO Auto-generated method stub
         super.withdraw(amount);
         if (balance < 0) {
             balance -= overdraftProtection;
